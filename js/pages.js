@@ -586,7 +586,7 @@ The Cursed Ring has power over one of the elements
             Power: Fire Bending
             Effect: Life draining
             Origin: Forged from the chains of a powerful prisoner
-            `
+            `,
 
         next: null
 
