@@ -424,32 +424,133 @@ The Cursed Ring has power over one of the elements
 
         type: "clue",
 
-        title: "The Hidden Passage",
+        title: "The Wizard's Pipe",
 
         image: "images/pipe.png",
 
         story:
-            "A mysterious pipe leads deeper into the mountain.",
+            `
+            You've found a perfect vessel to enjoy your leaf, the old wizard's pipe. "Might I borrow that?" you ask up to him.
+            "Certainly my hobbit firned," he replies as he leans down, handing you his pipe.
+            You pack the bowl and with a flash from your ringed hand set your leaf ablaze.
+            "My my," says the wizard. "Isn't that a fascinating trick. Let me have a closer look at your ring."
+            As he observes your ring his eyes grow wider and he seems...disturbed
+            "That ring...it is forged of Bethlarian Ore, the most durable material in Middle Earth, and used at one point to restrain one of the most powerful villains of the land."
+            "Forged from the chains of a most powerful prisoner it seems. You would be wise to travel to the mountains south of Angmar, perhaps learn of its power"
+            `,
 
         prompt:
-            "What instrument is commonly associated with pipes?",
+            "What is the name of the mountain range to the South of Angmar?",
 
         answerType: "text",
 
         answers: {
 
             accepted: [
-                "flute",
-                "bagpipe"
+                "ettenmoors"
             ]
 
         },
 
         success:
-            "The passage opens.",
+            `
+            Forged from the chains of a powerful prisoner? Hopefully you won't find too much trouble on this new journey...
+            `,
 
         failure:
-            "The passage remains sealed.",
+            "Best to look closer at the map",
+
+        next: {
+
+            destination: "pipe2"
+
+        }
+
+    },
+
+    pipe2: {
+
+        type: "clue",
+
+        title: "The Prison of the Ettenmoors",
+
+        image: "images/ettenmoors.png",
+
+        story:
+            `
+            You've made it into the sharp peaks of the Ettenmoors. The wizard aided you on your path and led you first to a nearby village, hoping the locals might illuminate more about your ring.
+            The villagers have been terrorized by someone or something they believe was coming from that forsaken place. They told you the prison you sought was hidden deep within the mountains, likely under an immovable stone, and they seem to have been right.
+            You've found that immovable stone, if only you had a way to displace it, you could enter the prison.
+            `,
+
+        prompt:
+            "Someone here has a ring that can control the earth, what symbol is etched around the ring?",
+
+        answerType: "text",
+
+        answers: {
+
+            accepted: [
+                "arrows",
+                "arrow",
+                "an arrow"
+            ]
+
+        },
+
+        success:
+            `
+            The great stone moves aside with ease, into the prison you proceed...
+            `,
+
+        failure:
+            "Look closer at the ring",
+
+        next: {
+
+            destination: "pipe3"
+
+        }
+
+    },
+
+    pipe3: {
+
+        type: "clue",
+
+        title: "The Prisoner's Disciple",
+
+        image: "images/prison.png",
+
+        story:
+            `
+           You enter the prison, lighting the way with fire from your ringed hand when suddenly, you see him.
+           A towering figure, most certainly warped by the evil that consumes him looming at the end of the hallway.
+           "HOW DARE YOU DEFILE THESE HALLOWED HALLS!" he booms.
+           He draws a long, dark blade and begins sprinting toward you.
+           You're still masteirng this ring, but the time to test your skill has come
+            `,
+
+        prompt:
+            "Complete Tyler's callenge to continue",
+
+        answerType: "number",
+
+        answers: {
+
+            accepted: [
+                451
+            ]
+
+        },
+
+        success:
+            `
+            Your aim is true and your fireball lands in a devestating blow
+            `,
+
+        failure:
+            "You missed! Try again, quickly!",
 
         next: {
 
@@ -458,8 +559,6 @@ The Cursed Ring has power over one of the elements
         }
 
     },
-
-
     //--------------------------------------------------
     // PIPE ENDING
     //--------------------------------------------------
@@ -469,18 +568,28 @@ The Cursed Ring has power over one of the elements
 
         type: "ending",
 
-        title: "The Pipe's Secret",
+        title: "The Fire Ring",
 
-        image: "images/pipe.png",
+        image: "images/firering.png",
 
         story:
-            "A hidden chamber reveals another piece of the mystery.",
+            `
+            The prisoner's disciple falls, mortally wounded and crying in pain. 
+            "You fool! You may have harnessed the ring I forged of my master's chains, but none is strong enough to survive it's power!"
+            And it seems he was right. You had assumed it was just the demands of such a treacherous journey that had drained your energy so much.
+            But no, as you rip the ring from your finger you can feel life pouring back into you. It seems this ring drains the life of its wearer.
+            `,
 
         endingText:
-            "Your collected clue: The cursed ring carries an ancient inscription.",
+            `
+            Your Ring:
+            Power: Fire Bending
+            Effect: Life draining
+            Origin: Forged from the chains of a powerful prisoner
+            `
 
         mysteryClue:
-            "Ancient inscription",
+            "",
 
         next: null
 
