@@ -302,7 +302,9 @@ The Cursed Ring has power over one of the elements
                 "dragon's fang",
                 "a dragon's fang",
                 "the fang of a dragon",
-                "fang of a dragon"
+                "fang of a dragon",
+                "dragons fang",
+                "a dragons fang"
             ]
 
         },
