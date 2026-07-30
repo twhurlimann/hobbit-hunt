@@ -224,32 +224,145 @@ The Cursed Ring has power over one of the elements
 
         type: "clue",
 
-        title: "The Forgotten Bridge",
+        title: "The Troll Under the Bridge",
 
         image: "images/bridge.png",
 
         story:
-            "An old bridge stretches across a dark ravine.",
+            `
+            Ah the old bridge over the stream! A perfect place to try out your new magic tricks; not many come here lately.
+            You step onto its beams an begin manipulating the stream with your ring when you hear 
+            "Halt traveler!" come from...under the bridge?
+            "If you wish to cross my bridge, you first must solve my riddle"
+            Oh great, the bridge has been left so long a troll has claimed it.
+            Might as well humor him...
+            `,
 
         prompt:
-            "What material is traditionally used to make a bridge's strongest supports?",
+            `
+            "I don't shoot arrows yet I share the name. Where the water falls, you'll see my frame.
+            What am I?"
+            `,
 
         answerType: "text",
 
         answers: {
 
             accepted: [
-                "stone",
-                "rock"
+                "rainbow",
+                "a rainbow"
             ]
 
         },
 
         success:
-            "The bridge creaks open.",
+            `
+            "Haha! Yes! A Rainbow!" Laughes the troll. "That ring your brought reminded me of it. 
+            Legened says that ring was found at the end of a rainbow"
+            `,
 
         failure:
-            "The bridge remains still.",
+            "Ha! An interesting interpretation traveler; try again.",
+
+        next: {
+
+            destination: "bridge2"
+
+        }
+
+    },
+
+  bridge2: {
+
+        type: "clue",
+
+        title: "To The Rainbow",
+
+        image: "images/rainbow.png",
+
+        story:
+            `
+            Huh, this ring came from a rainbow he says? And what luck! There appears to be a rainbow on the horizon!
+            Perhaps traveling to it could reveal more secrets of this ring! It's rather far though, certainly would be
+            helpful if you could just...fly there
+            `,
+
+        prompt:
+            `
+            Someone at this party has a ring which bestows the user with flight. What was this flight ring forged from?
+            `,
+
+        answerType: "text",
+
+        answers: {
+
+            accepted: [
+                "dragon fang",
+                "a dragon fang",
+                "dragon's fang",
+                "a dragon's fang",
+                "the fang of a dragon",
+                "fang of a dragon",
+            ]
+
+        },
+
+        success:
+            `
+            Off to the rainbow!
+            `,
+
+        failure:
+            "That isn't the flight ring, you'll have to keep looking",
+
+        next: {
+
+            destination: "bridge3"
+
+        }
+
+    },
+    
+  bridge3: {
+
+        type: "clue",
+
+        title: "The End of the Rainbow",
+
+        image: "images/crystalpalace.png",
+
+        story:
+            `
+            To feel the wind under your feet and...nothing else; what a thrill it is to fly. 
+            As you approach the rainbow you start to see its end in the clouds, and my is it marvelous!
+            A palace of crystal begins to materialize (best not throw stones here eh) and you fly to what must be the entrance
+            You knock on the shining door before you and a large...cloud creature? Opens the door and looks down at you
+            "Ah! A hobbit! Don't often see you here at the cloud palace," his voice booms as thunder.
+            "We don't allow strangers in unannounced, but for the right coin I'll let you pass"
+            `,
+
+        prompt:
+            `
+            What is the value of the coin with an owl on it?
+            `,
+
+        answerType: "number",
+
+        answers: {
+
+            accepted: [
+                1
+            ]
+
+        },
+
+        success:
+            `
+            "Ah! A lovely piece! Very well, come inside"
+            `,
+
+        failure:
+            "I would prefer a different coin",
 
         next: {
 
@@ -258,7 +371,6 @@ The Cursed Ring has power over one of the elements
         }
 
     },
-
 
     //--------------------------------------------------
     // BRIDGE ENDING
@@ -269,18 +381,31 @@ The Cursed Ring has power over one of the elements
 
         type: "ending",
 
-        title: "The Bridge's Secret",
+        title: "The Water Ring",
 
-        image: "images/bridge.png",
+        image: "images/cloudking.png",
 
         story:
-            "Beneath the bridge you discover a hidden inscription.",
+            `
+            "Welcome hobbit friend," the king of the clouds says to you. "You're certainly far from home"
+            "That ring you wear! With the power to manipulate water, it also was blessed to heal its wearer"
+            A healing ring? That explains why your old, bothersome knee hasn't been on your mind this entire time
+            "My wife needs its healing to save her life, surely I could trade you for it; my queen's life is worth any treasure"
+            Surely you couldn't exploit the suffering of a queen
+            "Please," you answer the king. "Take the ring and save your beloved"
+            "Compassionate hobbit," the king replies. "Your kindness shall be rewarded" (see Tyler)
+            `,
 
         endingText:
-            "Your collected clue: The cursed ring belonged to a forgotten kingdom.",
+            `
+            Your Ring:
+            Power: Water Manipulation
+            Effect: Healing
+            Origin: Found at the end of a rainbow
+            `,
 
         mysteryClue:
-            "Forgotten kingdom",
+            ,
 
         next: null
 
