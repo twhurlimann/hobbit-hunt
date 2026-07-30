@@ -588,9 +588,6 @@ The Cursed Ring has power over one of the elements
             Origin: Forged from the chains of a powerful prisoner
             `
 
-        mysteryClue:
-            ``,
-
         next: null
 
     }
