@@ -405,7 +405,7 @@ The Cursed Ring has power over one of the elements
             `,
 
         mysteryClue:
-            ,
+            "",
 
         next: null
 
