@@ -231,7 +231,7 @@ The Cursed Ring has power over one of the elements
         story:
             `
             Ah the old bridge over the stream! A perfect place to try out your new magic tricks; not many come here lately.
-            You step onto its beams an begin manipulating the stream with your ring when you hear 
+            You step onto its beams and begin manipulating the stream with your ring when you hear 
             "Halt traveler!" come from...under the bridge?
             "If you wish to cross my bridge, you first must solve my riddle"
             Oh great, the bridge has been left so long a troll has claimed it.
