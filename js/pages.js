@@ -138,7 +138,7 @@ const pages = {
 
         story:
         `
-            It's wonderful to make it home, and it one piece too! Yet, you feel...smaller?
+            It's wonderful to make it home, and in one piece too! Yet, you feel...smaller?
             You're already so small in stature, surely you couldn't have gotten even closer to the ground
             Perhaps it's worth asking Tyler his opinion
         `,
@@ -186,16 +186,16 @@ const pages = {
 
         story:
         `
-            You've had quite the adventure and learned much about this mysterious ring.
-            Now perhaps you can share what you've learned with your commrads to discover the Cursed Ring
+You've had quite the adventure and learned much about this mysterious ring.
+Now perhaps you can share what you've learned with your commrads to discover the Cursed Ring
         `,
 
         endingText:
         `
-        Your Ring:
-            Power: Flight
-            Effect: Shrinking
-            Origin: Forged from the fang of a dragon
+Your Ring:
+Power: Flight
+Effect: Shrinking
+Origin: Forged from the fang of a dragon
         `
             ,
 
@@ -205,7 +205,7 @@ const pages = {
         mysteryClue:
         `
         Cursed Ring Clue:
-        The Cursed Ring has power over one of the elements
+The Cursed Ring has power over one of the elements
         `
             ,
 
