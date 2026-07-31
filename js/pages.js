@@ -1,4 +1,3 @@
-//--------------------------------------------------
 // Dragon Scavenger Hunt
 // Page Database
 //--------------------------------------------------
@@ -15,287 +14,161 @@
 //
 //--------------------------------------------------
 
-
 const pages = {
-
 
     //--------------------------------------------------
     // DRAGON PATH
     //--------------------------------------------------
 
-
     dragon1: {
-
         type: "clue",
-
         title: "The Dragon",
-
         image: "images/dragon.png",
-
-        story:
-        `
+        story: `
             You have been hiking through the mountains in the hopes of learning more about this mysterious ring,
-        and something has drawn you to this place; pure luck? or perhaps the ring itself. 
-        Regardless you now find yourself in a large cavern piled with gold and treasure. 
-        " Ah! An afternoon snack!" you hear a booming voice proclaim. Oh no! You've been told there was a dragon 
-        in these mountains and decided to venture here anyway.
+            and something has drawn you to this place; pure luck? or perhaps the ring itself. 
+            Regardless, you now find yourself in a large cavern piled with gold and treasure. 
+            "Ah! An afternoon snack!" you hear a booming voice proclaim. Oh no! You've been told there was a dragon 
+            in these mountains and decided to venture here anyway.
         `,
-
-        prompt:
-        `
+        prompt: `
             "As much as I enjoy the taste of Hobbit, my love of gold exceeds it.
-        I'll let you pass for the correct value coin" commands the Dragon.
-        (input the value of the coin with a dragon on it, someone here has it),
+            I'll let you pass for the correct value coin" commands the Dragon.
+            (input the value of the coin with a dragon on it, someone here has it),
         `,
-
         answerType: "number",
-
         answers: {
-
-            accepted: [
-                100
-            ]
-
+            accepted: [100]
         },
-
-        success:
-        `
+        success: `
             "Ah, a lovely piece to add to my horde," proclaims the dragon.
             "One more thing before you go... that ring you carry was forged from the fang of a dragon.",
         `,
-
-        failure:
-        `
+        failure: `
             "Ha! You think this will satisfy me! Try again Hobbit.",
         `,
-
         next: {
-
             destination: "dragon2"
-
         }
-
     },
 
-
-    //--------------------------------------------------
-
-
     dragon2: {
-
         type: "clue",
-
         title: "Return to the Shire",
-
         image: "images/mountain.png",
-
-        story:
-        `
+        story: `
             Relieved to have survived such an encounter, it is time to return to the shire, if only you could find your way...
         `,
-
-        prompt:
-        `
+        prompt: `
             Name the river directly east of the Blue Mountains.
         `,
-
         answerType: "text",
-
         answers: {
-
             accepted: [
                 "lune",
                 "lune river"
             ]
-
         },
-
-        success:
-            "\"Excellent. Your knowledge of Middle-earth serves you well.\"",
-
-        failure:
-            "That couldn't be the correct way, let me look again",
-
+        success: "\"Excellent. Your knowledge of Middle-earth serves you well.\"",
+        failure: "That couldn't be the correct way, let me look again",
         next: {
-
             destination: "dragon3"
-
         }
-
     },
-
-
-    //--------------------------------------------------
-
 
     dragon3: {
-
         type: "clue",
-
-        title: "Return to The Shire",
-
+        title: "Return To The Shire",
         image: "images/shire.png",
-
-        story:
-        `
+        story: `
             It's wonderful to make it home, and in one piece too! Yet, you feel...smaller?
-            You're already so small in stature, surely you couldn't have gotten even closer to the ground
-            Perhaps it's worth asking Tyler his opinion
+            You're already so small in stature, surely you couldn't have gotten even closer to the ground.
+            Perhaps it's worth asking Tyler his opinion.
         `,
-
-        prompt:
-            "Go to Tyler and ask if you're getting smaller (He'll tell you what to type)",
-
+        prompt: "Go to Tyler and ask if you're getting smaller (He'll tell you what to type)",
         answerType: "number",
-
         answers: {
-
-            accepted: [
-                5
-            ]
-
+            accepted: [5]
         },
-
-        success:
-            "\"You have proven yourself worthy.\"",
-
-        failure:
-            "\"Count again, traveler.\"",
-
+        success: "\"You have proven yourself worthy.\"",
+        failure: "\"Count again, traveler.\"",
         next: {
-
             destination: "dragonEnding"
-
         }
-
     },
-
-
-    //--------------------------------------------------
-    // DRAGON ENDING
-    //--------------------------------------------------
-
 
     dragonEnding: {
-
         type: "ending",
-
         title: "The Ring of the Dragon's Fang",
-
         image: "images/dragonring.png",
-
-        story:
-        `
-You've had quite the adventure and learned much about this mysterious ring.
-Now perhaps you can share what you've learned with your commrads to discover the Cursed Ring
+        story: `
+            You've had quite the adventure and learned much about this mysterious ring.
+            Now perhaps you can share what you've learned with your comrades to discover the Cursed Ring.
         `,
-
-        endingText:
-        `
-Your Ring:
-Power: Flight
-Effect: Shrinking
-Origin: Forged from the fang of a dragon
-        `
-            ,
-
-        // This is the clue players share
-        // with other teams at the party.
-
-        mysteryClue:
-        `
-        Cursed Ring Clue:
-The Cursed Ring has power over one of the elements
-        `
-            ,
-
+        endingText: `
+            Your Ring:
+            Power: Flight
+            Effect: Shrinking
+            Origin: Forged from the fang of a dragon
+        `,
+        mysteryClue: `
+            Cursed Ring Clue:
+            The Cursed Ring has power over one of the elements
+        `,
         next: null
-
     },
 
-
-
     //--------------------------------------------------
-    // BRIDGE PATH EXAMPLE
+    // BRIDGE PATH
     //--------------------------------------------------
-
 
     bridge1: {
-
         type: "clue",
-
         title: "The Troll Under the Bridge",
-
         image: "images/bridge.png",
-
-        story:
-            `
+        story: `
             Ah the old bridge over the stream! A perfect place to try out your new magic tricks; not many come here lately.
             You step onto its beams and begin manipulating the stream with your ring when you hear 
             "Halt traveler!" come from...under the bridge?
             "If you wish to cross my bridge, you first must solve my riddle"
             Oh great, the bridge has been left so long a troll has claimed it.
             Might as well humor him...
-            `,
-
-        prompt:
-            `
+        `,
+        prompt: `
             "I don't shoot arrows yet I share the name. Where the water falls, you'll see my frame.
             What am I?"
-            `,
-
+        `,
         answerType: "text",
-
         answers: {
-
             accepted: [
                 "rainbow",
                 "a rainbow"
             ]
-
         },
-
-        success:
-            `
-            "Haha! Yes! A Rainbow!" Laughes the troll. "That ring your brought reminded me of it. 
-            Legened says that ring was found at the end of a rainbow"
-            `,
-
-        failure:
-            "Ha! An interesting interpretation traveler; try again.",
-
+        success: `
+            "Haha! Yes! A Rainbow!" laughs the troll. "That ring you brought reminded me of it. 
+            Legend says that ring was found at the end of a rainbow"
+        `,
+        failure: "Ha! An interesting interpretation traveler; try again.",
         next: {
-
             destination: "bridge2"
-
         }
-
     },
 
-  bridge2: {
-
+    bridge2: {
         type: "clue",
-
         title: "To The Rainbow",
-
         image: "images/rainbow.png",
-
-        story:
-            `
+        story: `
             Huh, this ring came from a rainbow he says? And what luck! There appears to be a rainbow on the horizon!
             Perhaps traveling to it could reveal more secrets of this ring! It's rather far though, certainly would be
-            helpful if you could just...fly there
-            `,
-
-        prompt:
-            `
+            helpful if you could just...fly there.
+        `,
+        prompt: `
             Someone at this party has a ring which bestows the user with flight. What was this flight ring forged from?
-            `,
-
+        `,
         answerType: "text",
-
         answers: {
-
             accepted: [
                 "dragon fang",
                 "a dragon fang",
@@ -306,290 +179,266 @@ The Cursed Ring has power over one of the elements
                 "dragons fang",
                 "a dragons fang"
             ]
-
         },
-
-        success:
-            `
-            Off to the rainbow!
-            `,
-
-        failure:
-            "That isn't the flight ring, you'll have to keep looking",
-
+        success: `Off to the rainbow!`,
+        failure: "That isn't the flight ring, you'll have to keep looking",
         next: {
-
             destination: "bridge3"
-
         }
-
     },
-    
-  bridge3: {
 
+    bridge3: {
         type: "clue",
-
         title: "The End of the Rainbow",
-
         image: "images/crystalpalace.png",
-
-        story:
-            `
+        story: `
             To feel the wind under your feet and...nothing else; what a thrill it is to fly. 
             As you approach the rainbow you start to see its end in the clouds, and my is it marvelous!
-            A palace of crystal begins to materialize (best not throw stones here eh) and you fly to what must be the entrance
-            You knock on the shining door before you and a large...cloud creature? Opens the door and looks down at you
+            A palace of crystal begins to materialize (best not throw stones here eh) and you fly to what must be the entrance.
+            You knock on the shining door before you and a large...cloud creature? Opens the door and looks down at you.
             "Ah! A hobbit! Don't often see you here at the cloud palace," his voice booms as thunder.
             "We don't allow strangers in unannounced, but for the right coin I'll let you pass"
-            `,
-
-        prompt:
-            `
+        `,
+        prompt: `
             What is the value of the coin with an owl on it?
-            `,
-
+        `,
         answerType: "number",
-
         answers: {
-
-            accepted: [
-                1
-            ]
-
+            accepted: [1]
         },
-
-        success:
-            `
-            "Ah! A lovely piece! Very well, come inside"
-            `,
-
-        failure:
-            "I would prefer a different coin",
-
+        success: `"Ah! A lovely piece! Very well, come inside"`,
+        failure: "I would prefer a different coin",
         next: {
-
             destination: "bridgeEnding"
-
         }
-
     },
 
-    //--------------------------------------------------
-    // BRIDGE ENDING
-    //--------------------------------------------------
-
-
     bridgeEnding: {
-
         type: "ending",
-
         title: "The Water Ring",
-
         image: "images/cloudking.png",
-
-        story:
-            `
+        story: `
             "Welcome hobbit friend," the king of the clouds says to you. "You're certainly far from home"
             "That ring you wear! With the power to manipulate water, it also was blessed to heal its wearer"
-            A healing ring? That explains why your old, bothersome knee hasn't been on your mind this entire time
+            A healing ring? That explains why your old, bothersome knee hasn't been on your mind this entire time.
             "My wife needs its healing to save her life, surely I could trade you for it; my queen's life is worth any treasure"
-            Surely you couldn't exploit the suffering of a queen
+            Surely you couldn't exploit the suffering of a queen.
             "Please," you answer the king. "Take the ring and save your beloved"
             "Compassionate hobbit," the king replies. "Your kindness shall be rewarded" (see Tyler)
-            `,
-
-        endingText:
-            `
+        `,
+        endingText: `
             Your Ring:
             Power: Water Manipulation
             Effect: Healing
             Origin: Found at the end of a rainbow
-            `,
-
-        mysteryClue:
-            "",
-
+        `,
+        mysteryClue: "",
         next: null
-
     },
 
-
-
     //--------------------------------------------------
-    // PIPE PATH EXAMPLE
+    // PIPE PATH
     //--------------------------------------------------
-
 
     pipe1: {
-
         type: "clue",
-
         title: "The Wizard's Pipe",
-
         image: "images/pipe.png",
-
-        story:
-            `
+        story: `
             You've found a perfect vessel to enjoy your leaf, the old wizard's pipe. "Might I borrow that?" you ask up to him.
-            "Certainly my hobbit firned," he replies as he leans down, handing you his pipe.
+            "Certainly my hobbit friend," he replies as he leans down, handing you his pipe.
             You pack the bowl and with a flash from your ringed hand set your leaf ablaze.
             "My my," says the wizard. "Isn't that a fascinating trick. Let me have a closer look at your ring."
-            As he observes your ring his eyes grow wider and he seems...disturbed
+            As he observes your ring his eyes grow wider and he seems...disturbed.
             "That ring...it is forged of Bethlarian Ore, the most durable material in Middle Earth, and used at one point to restrain one of the most powerful villains of the land."
             "Forged from the chains of a most powerful prisoner it seems. You would be wise to travel to the mountains south of Angmar, perhaps learn of its power"
-            `,
-
-        prompt:
-            "What is the name of the mountain range to the South of Angmar?",
-
+        `,
+        prompt: "What is the name of the mountain range to the South of Angmar?",
         answerType: "text",
-
         answers: {
-
-            accepted: [
-                "ettenmoors"
-            ]
-
+            accepted: ["ettenmoors"]
         },
-
-        success:
-            `
+        success: `
             Forged from the chains of a powerful prisoner? Hopefully you won't find too much trouble on this new journey...
-            `,
-
-        failure:
-            "Best to look closer at the map",
-
+        `,
+        failure: "Best to look closer at the map",
         next: {
-
             destination: "pipe2"
-
         }
-
     },
 
     pipe2: {
-
         type: "clue",
-
         title: "The Prison of the Ettenmoors",
-
         image: "images/ettenmoors.png",
-
-        story:
-            `
+        story: `
             You've made it into the sharp peaks of the Ettenmoors. The wizard aided you on your path and led you first to a nearby village, hoping the locals might illuminate more about your ring.
             The villagers have been terrorized by someone or something they believe was coming from that forsaken place. They told you the prison you sought was hidden deep within the mountains, likely under an immovable stone, and they seem to have been right.
             You've found that immovable stone, if only you had a way to displace it, you could enter the prison.
-            `,
-
-        prompt:
-            "Someone here has a ring that can control the earth, what symbol is etched around the ring?",
-
+        `,
+        prompt: "Someone here has a ring that can control the earth, what symbol is etched around the ring?",
         answerType: "text",
-
         answers: {
-
             accepted: [
                 "arrows",
                 "arrow",
                 "an arrow"
             ]
-
         },
-
-        success:
-            `
+        success: `
             The great stone moves aside with ease, into the prison you proceed...
-            `,
-
-        failure:
-            "Look closer at the ring",
-
+        `,
+        failure: "Look closer at the ring",
         next: {
-
             destination: "pipe3"
-
         }
-
     },
 
     pipe3: {
-
         type: "clue",
-
         title: "The Prisoner's Disciple",
-
         image: "images/prison.png",
-
-        story:
-            `
+        story: `
            You enter the prison, lighting the way with fire from your ringed hand when suddenly, you see him.
            A towering figure, most certainly warped by the evil that consumes him looming at the end of the hallway.
            "HOW DARE YOU DEFILE THESE HALLOWED HALLS!" he booms.
            He draws a long, dark blade and begins sprinting toward you.
-           You're still masteirng this ring, but the time to test your skill has come
-            `,
-
-        prompt:
-            "Complete Tyler's callenge to continue",
-
+           You're still mastering this ring, but the time to test your skill has come.
+        `,
+        prompt: "Complete Tyler's challenge to continue",
         answerType: "number",
-
         answers: {
-
-            accepted: [
-                451
-            ]
-
+            accepted: [451]
         },
-
-        success:
-            `
-            Your aim is true and your fireball lands in a devestating blow
-            `,
-
-        failure:
-            "You missed! Try again, quickly!",
-
+        success: `
+            Your aim is true and your fireball lands in a devastating blow.
+        `,
+        failure: "You missed! Try again, quickly!",
         next: {
-
             destination: "pipeEnding"
-
         }
-
     },
-    //--------------------------------------------------
-    // PIPE ENDING
-    //--------------------------------------------------
-
 
     pipeEnding: {
-
         type: "ending",
-
         title: "The Fire Ring",
-
         image: "images/firering.png",
-
-        story:
-            `
+        story: `
             The prisoner's disciple falls, mortally wounded and crying in pain. 
-            "You fool! You may have harnessed the ring I forged of my master's chains, but none is strong enough to survive it's power!"
+            "You fool! You may have harnessed the ring I forged of my master's chains, but none is strong enough to survive its power!"
             And it seems he was right. You had assumed it was just the demands of such a treacherous journey that had drained your energy so much.
             But no, as you rip the ring from your finger you can feel life pouring back into you. It seems this ring drains the life of its wearer.
-            `,
-
-        endingText:
-            `
+        `,
+        endingText: `
             Your Ring:
             Power: Fire Bending
             Effect: Life draining
             Origin: Forged from the chains of a powerful prisoner
-            `,
-
-        mysteryclue: "",
-
+        `,
+        mysteryClue: "",
         next: null
+    },
 
-},
+    //--------------------------------------------------
+    // STONE PATH
+    //--------------------------------------------------
+
+    stone1: {
+        type: "clue",
+        title: "A Haunting Discovery",
+        image: "images/elfghost.png",
+        story: `
+            It's good to get these blasted stones so easily removed, but wait...is it getting...foggy?
+            A grayness and mist seem to build around you and a chill climbs up your spine.
+            "Return my ring" you hear a soft, almost airy voice demand behind you.
+            You turn around to see the pale, terrifying face of a female spectre who suddenly opens her mouth wide, screams deafeningly loud and flies into you, disappearing along with the mist.
+            Didn't Tyler give you this ring? You should demand an explanation from him.
+        `,
+        prompt: "See Tyler for the answer to move on",
+        answerType: "text",
+        answers: {
+            accepted: ["rivendell"]
+        },
+        success: `
+            The ring was found in Rivendell? Probably best to figure out which way to get there.
+        `,
+        failure: "Make sure you speak with Tyler",
+        next: {
+            destination: "stone2"
+        }
+    },
+
+    stone2: {
+        type: "clue",
+        title: "The Way to Rivendell",
+        image: "images/ettenmoors.png",
+        story: `
+           You're preparing to journey to Rivendell in hopes of learning more about this ring and hopefully quieting the ghost that haunts it.
+           Suddenly, once again you feel and see the mist rising about you. Turning round frantically you see the same spirit standing off in the distance in the woods.
+           "Return my ring to me in the waters where I met my end," she commands.
+        `,
+        prompt: "Waters near Rivendell? It must be that river which runs into it, what was its name again?",
+        answerType: "text",
+        answers: {
+            accepted: ["loudwater"]
+        },
+        success: `
+            Right! Loudwater! Let's make our way!
+        `,
+        failure: "Check the map, you should see a river named to the South of Rivendell",
+        next: {
+            destination: "stone3"
+        }
+    },
+
+    stone3: {
+        type: "clue",
+        title: "Returning the Ring",
+        image: "images/river.png",
+        story: `
+           You've made your way to Loudwater and its name is befitting, you can barely hear yourself think.
+           Once again though the sad spectre appears, and somehow the rushing water's roars fade away, and you hear her say
+           "Please, part the waters and place my wedding ring on my finger"
+           Part the waters? Seems impossible, but then again the ring you have can manipulate the earth so easily, perhaps something can help with the water.
+        `,
+        prompt: "Someone has a ring which can control water, enter where the ring came from",
+        answerType: "text",
+        answers: {
+            accepted: [
+                "the end of a rainbow",
+                "end of a rainbow",
+                "a rainbow",
+                "rainbow",
+                "the end of the rainbow",
+                "end of the rainbow"
+            ]
+        },
+        success: `
+           Wow, the water of the rushing river parts with ease and you can see the bottom.
+        `,
+        failure: "What is the original place from which the water ring came from?",
+        next: {
+            destination: "stoneEnding"
+        }
+    },
+
+    stoneEnding: {
+        type: "ending",
+        title: "The Earth Ring",
+        image: "images/tomb.png",
+        story: `
+           The waters of the river part and you can see at the bottom, body of a beautiful elf princess, the very same who has been haunting you!
+           Her hand is wrapped in what must be her beloved, but missing from her finger must be the wedding ring you've found.
+           You stoop down and replace the ring onto her finger. 
+           As you make your way back to the shore and before allowing the waters to return to their flow, it seems the elf princess has started to smile, and you can hear that same voice of before whisper "Thank you".
+        `,
+        endingText: `
+            Your Ring:
+            Power: Earth Bending
+            Effect: Haunted by a ghost
+            Origin: Wedding ring of an elf princess
+        `,
+        mysteryClue: "",
+        next: null
+    }
+};
