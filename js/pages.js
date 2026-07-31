@@ -45,7 +45,7 @@ const pages = {
         `
             "As much as I enjoy the taste of Hobbit, my love of gold exceeds it.
         I'll let you pass for the correct value coin" commands the Dragon.
-        (input the value of the coin with a dragon on it),
+        (input the value of the coin with a dragon on it, someone here has it),
         `,
 
         answerType: "number",
@@ -674,7 +674,7 @@ The Cursed Ring has power over one of the elements
 
         success:
             `
-            The great stone moves aside with ease, into the prison you proceed...
+            Right! Loudwater! Let's make our way!
             `,
 
         failure:
@@ -698,7 +698,7 @@ The Cursed Ring has power over one of the elements
 
         story:
             `
-           You've made your way to loudwater and its name is befitting, you can barely hear youself think.
+           You've made your way to Loudwater and its name is befitting, you can barely hear youself think.
            Once again though the sad spectre appears, and somehow the rushing water's roars fade away, and you hear her say
            "Please, part the waters and place my wedding ring on my finger"
            Part the waters? Seems impossible, but then again the ring you have can manipulate the earth so easily, perhaps something can help with the water
@@ -752,15 +752,180 @@ The Cursed Ring has power over one of the elements
 
         story:
             `
+           The waters of the river part and you can see at the bottom, body of a beautiful elf princess, the very same who has been haunting you!
+           Her hand is wrapped in what must be her beloved, but missing from her finger must be the wedding ring you've found.
+           You stoop down and replace the ring onto her finger. 
+           As you make your way back to the shore and before allowing the waters to return to their flow, it seems the elf princess has started to smile, and you can hear that same voice of before whisper "Thank you"
+            `,
+
+        endingText:
+            `
+            Your Ring:
+            Power: Earth Bending
+            Effect: Haunted by a ghost
+            Origin: Wedding ring of an elf princess
+            `,
+
+        mysteryclue: "",
+
+        next: null
+
+    }
+
+
+
+};
+ eye1: {
+
+        type: "clue",
+
+        title: "A Haunting Discovery",
+
+        image: "images/pipe.png",
+
+        story:
+            `
+            
+            `,
+
+        prompt:
+            "What is the name of the mountain range to the South of Angmar?",
+
+        answerType: "text",
+
+        answers: {
+
+            accepted: [
+                "ettenmoors"
+            ]
+
+        },
+
+        success:
+            `
+            Forged from the chains of a powerful prisoner? Hopefully you won't find too much trouble on this new journey...
+            `,
+
+        failure:
+            "Best to look closer at the map",
+
+        next: {
+
+            destination: "eye2"
+
+        }
+
+    },
+
+    eye2: {
+
+        type: "clue",
+
+        title: "The Prison of the Ettenmoors",
+
+        image: "images/ettenmoors.png",
+
+        story:
+            `
+           
+            `,
+
+        prompt:
+            "Someone here has a ring that can control the earth, what symbol is etched around the ring?",
+
+        answerType: "text",
+
+        answers: {
+
+            accepted: [
+                "arrows",
+                "arrow",
+                "an arrow"
+            ]
+
+        },
+
+        success:
+            `
+            The great stone moves aside with ease, into the prison you proceed...
+            `,
+
+        failure:
+            "Look closer at the ring",
+
+        next: {
+
+            destination: "eye3"
+
+        }
+
+    },
+
+    eye3: {
+
+        type: "clue",
+
+        title: "The Prisoner's Disciple",
+
+        image: "images/prison.png",
+
+        story:
+            `
+           
+            `,
+
+        prompt:
+            "Complete Tyler's callenge to continue",
+
+        answerType: "number",
+
+        answers: {
+
+            accepted: [
+                451
+            ]
+
+        },
+
+        success:
+            `
+            Your aim is true and your fireball lands in a devestating blow
+            `,
+
+        failure:
+            "You missed! Try again, quickly!",
+
+        next: {
+
+            destination: "eyeEnding"
+
+        }
+
+    },
+    //--------------------------------------------------
+    // PIPE ENDING
+    //--------------------------------------------------
+
+
+    eyeEnding: {
+
+        type: "ending",
+
+        title: "The Fire Ring",
+
+        image: "images/firering.png",
+
+        story:
+            `
            
             `,
 
         endingText:
             `
             Your Ring:
-            Power: Fire Bending
-            Effect: Life draining
-            Origin: Forged from the chains of a powerful prisoner
+            Power: Strength
+            Effect: Growth
+            Origin: Forged from the bones of a giant
             `,
 
         mysteryclue: "",
