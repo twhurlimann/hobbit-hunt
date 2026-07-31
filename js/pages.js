@@ -427,7 +427,7 @@ const pages = {
         title: "The Earth Ring",
         image: "images/tomb.png",
         story: `
-           The waters of the river part and you can see at the bottom, body of a beautiful elf princess, the very same who has been haunting you!
+           The waters of the river part and you can see at the bottom, the body of a beautiful elf princess, the very same who has been haunting you!
            Her hand is wrapped in what must be her beloved, but missing from her finger must be the wedding ring you've found.
            You stoop down and replace the ring onto her finger. 
            As you make your way back to the shore and before allowing the waters to return to their flow, it seems the elf princess has started to smile, and you can hear that same voice of before whisper "Thank you".
