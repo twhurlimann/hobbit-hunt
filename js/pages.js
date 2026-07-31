@@ -270,7 +270,7 @@ const pages = {
         title: "The Giant Graveyard",
         image: "images/giant.png",
         story: `
-           Exploring Mordor is terrible, and yet also so...fascinating. At first you were enering for braging rights, but now, something about the ring has drawn you to the most interesting place.
+           Exploring Mordor is terrible, and yet also so...fascinating. At first you were entering for braging rights, but now, something about the ring has drawn you to the most interesting place.
            You're surrounded by the humongous bones of giants, and as you look closer you can see that your ring is clearly forged from the same material.
            This likely explains why it would bestow such incredible strength into the wearer!
            With such an unexpected mystery solved, it's time to return home to the Shire, just need to find your way...
@@ -299,7 +299,7 @@ const pages = {
         image: "images/strengthring.png",
         story: `
         You've made it home and what a story you'll have to tell! First and foremost to the one who challenged you to test your courage.
-        You walk right up behind Chandler as he is sitting with a group of friends and drop your bag of Mordor ash right over his shoulder ont the table.
+        You walk right up behind Chandler as he is sitting with a group of friends and drop your bag of Mordor ash right over his shoulder onto the table.
         "By the Gods you actually did it you mad mad hobbit!" he cries out
         "And goodness are you...are you taller?" he asks you
         Now that he mentions it, you do seem to be further from the ground, just another benefit of this blessed ring
