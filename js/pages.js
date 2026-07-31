@@ -91,7 +91,7 @@ const pages = {
             accepted: [5]
         },
         success: "\"You have proven yourself worthy.\"",
-        failure: "\"Count again, traveler.\"",
+        failure: "\"Try again.\"",
         next: {
             destination: "dragonEnding"
         }
