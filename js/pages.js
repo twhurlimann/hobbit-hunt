@@ -126,7 +126,7 @@ const pages = {
         title: "A Little Wager",
         image: "images/cards.png",
         story: `
-            A nice fine for sure. This goblet must be worth something. Better yet though, Chandler is always bold enough to make a wager...
+            A nice find for sure. This goblet must be worth something. Better yet though, Chandler is always bold enough to make a wager...
             You should challenge him to a card game
         `,
         prompt: `
@@ -181,7 +181,7 @@ const pages = {
         image: "images/opportunity.png",
         story: `
            You've made it to the city and are ready to explore the tavern for you first 'mark'. Walking into the tavern you see a card game already assembled at a nearby table.
-           "Mind if I join you gentlement?" you ask your victims, I mean, fellow players.
+           "Mind if I join you gentlemen?" you ask your victims, I mean, fellow players.
            "Why certainly little hobbit friend, anyone's money is welcome here," one of them tells you.
            ...
            They never stood a chance. Hand after hand your pile of coins grows. You can tell your opponents are getting angry.
