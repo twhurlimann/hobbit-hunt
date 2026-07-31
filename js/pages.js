@@ -118,6 +118,115 @@ const pages = {
         next: null
     },
   //--------------------------------------------------
+    // OCARINA PATH
+    //--------------------------------------------------
+
+    ocarina1: {
+        type: "clue",
+        title: "",
+        image: "images/ocarina.png",
+        story: `
+            You've always loved playing your ocarina, and now you don't need to pause between breaths. You can even manipulate one instrument to produce multiple notes at the same time!
+            "What a wonderful trick," an old wizard remarks as he walks up to you. "Playing an ocarina with just your hands is no easy feat!"
+            "I recognize that ring you've fond," he continues. "Aren't you curious where it came from hobbit friend? Take a look at the inscription inside, see if you can't read it"
+            You remove the ring and lo and behold, there is something written inside! It looks like giberish yet you are seemingly able to interpret it with ease
+            'BNEFWI'
+        `,
+        prompt: `
+            Decode the ring's inscription (perhaps one of the coins you found with your ring may help...)
+        `,
+        answerType: "text",
+        answers: {
+            accepted: [
+                "wizard"
+            ]
+        },
+        success: `
+           "Wizard, it clearly says wizard"
+        `,
+        failure: "An interesting interpretation; try again.",
+        next: {
+            destination: "ocarina2"
+        }
+    },
+
+    ocarina2: {
+        type: "clue",
+        title: "The Origin of the Air Ring",
+        image: "images/rainbow.png",
+        story: `
+           "Wizard is correct my hobbit friend," chuckles the old wizard. "Can you read the whole thing?" he asks you.
+           Amazingly, you can, with ease! Despite the entire thing being pure giberish before you can easily read that it says "Property of the Wizard of Forlond"
+           "So this ring belonged to a wizard?" you ask
+           "Still does I'd say," the wizard replies. "Story goes it was stolen from him long ago and he has been desperately seraching for it since. I'd advise you return it to him. He'll likely repay you for your troubles, and give you plenty of troubles if he finds out you have it..."
+           You certainly don't want to make an enemy of a wizard, best to find your way to Forlond
+        `,
+        prompt: `
+           What is the name of the mountain range just East of Forlond
+        `,
+        answerType: "text",
+        answers: {
+            accepted: [
+                "the blue mountains",
+                "blue mountains",
+                "blue",
+                "blues"
+    
+            ]
+        },
+        success: `Off to the wizard!`,
+        failure: "That can't be the way, I should check the map",
+        next: {
+            destination: "ocarina3"
+        }
+    },
+
+    ocarina3: {
+        type: "clue",
+        title: "The Wizard's Hideout",
+        image: "images/hideout.png",
+        story: `
+           Thankfully that old wizard was kind enough to tell you where to find this ring's original owner. Apparently he likes to frequent a rather...shady tavern.
+           You've made your way and walk up to the door just where the wizard had described it, tucked into a dark alley.
+           You give a quick knock and a smaller door opens revealing peering eyes.
+           "Password?" you hear a voice request
+           If only you could read his mind, perhaps you would know the answer...
+        `,
+        prompt: `
+            Someone here has a ring that can read minds. Ask them the game they won to earn their ring
+        `,
+        answerType: "number",
+        answers: {
+            accepted: [21]
+        },
+        success: `"Ok, come on in"`,
+        failure: "Sorry, we don't let strangers in here (try again)",
+        next: {
+            destination: "ocarinaEnding"
+        }
+    },
+
+    ocarinaEnding: {
+        type: "ending",
+        title: "The Air Ring",
+        image: "images/wizardtavern.png",
+        story: `
+        You enter and make your way to a table shared by a few wizards.
+        "My my! Not often we see hobbits in this part of the world!" one remarks "What brings you all this way?" asks another.
+        "I believe I've found something belonging to on of you," you reply as you raise the ring outstretched in your fingers.
+        "Oh! You've returned my ring!" one of them exclaims. "You hobbits and your penchant for kindness is truly remarkable"
+        Certainly is nice to have made a new friend, especially one skilled with magic!
+        `,
+        endingText: `
+            Your Ring:
+            Power: Air Manipulation
+            Effect: Interpreter
+            Origin: Stolen from a wizard
+        `,
+        mysteryClue: "",
+        next: null
+    },
+    //--------------------------------------------------
     // GOBLET PATH
     //--------------------------------------------------
 
