@@ -118,6 +118,113 @@ const pages = {
         next: null
     },
   //--------------------------------------------------
+    // GOBLET PATH
+    //--------------------------------------------------
+
+    goblet1: {
+        type: "clue",
+        title: "A Little Wager",
+        image: "images/cards.png",
+        story: `
+            A nice fine for sure. This goblet must be worth something. Better yet though, Chandler is always bold enough to make a wager...
+            You should challenge him to a card game
+        `,
+        prompt: `
+            What game did you beat Chandler in?
+        `,
+        answerType: "number",
+        answers: {
+            accepted: [
+                21
+            ]
+        },
+        success: `
+           What an incredible ring! And it seems when you wear it you can hear the thoughts of others. This may prove very useful.
+        `,
+        failure: "Ensure you play Chandler at cards.",
+        next: {
+            destination: "goblet2"
+        }
+    },
+
+    goblet2: {
+        type: "clue",
+        title: "To The Casino!",
+        image: "images/mindread.png",
+        story: `
+           Chandler says he originally won this from a trickster troll who claims to have created it! That foolish troll didn't consider how best to take advantage of its power.
+           A mind reading ring presents quite the opportunity. You've heard of a marvelous town built on an economy of gamblers somewhere to the East.
+           If only you could remember where to go
+        `,
+        prompt: `
+           Name the gulf directly east of The Shire
+        `,
+        answerType: "text",
+        answers: {
+            accepted: [
+                "gulf of lune",
+                "the gulf of lune",
+                "lune",
+                "the lune"
+            ]
+        },
+        success: `Opportunity awaits!`,
+        failure: "That doesn't seem right, better check the map again",
+        next: {
+            destination: "goblet3"
+        }
+    },
+
+    goblet3: {
+        type: "clue",
+        title: "The Land of Opportunity",
+        image: "images/opportunity.png",
+        story: `
+           You've made it to the city and are ready to explore the tavern for you first 'mark'. Walking into the tavern you see a card game already assembled at a nearby table.
+           "Mind if I join you gentlement?" you ask your victims, I mean, fellow players.
+           "Why certainly little hobbit friend, anyone's money is welcome here," one of them tells you.
+           ...
+           They never stood a chance. Hand after hand your pile of coins grows. You can tell your opponents are getting angry.
+           With the last of their gold now belonging to you, the largest of the bunch stands from his chair and begins taking the gold you rightfully 'won'.
+           "Hey! I've rightfully won those! Give them back!" you insist.
+           "Make me puny hobbit," the towering figure replies
+        `,
+        prompt: `
+            Someone here has a ring that gives them incredible strength. Ask them what region of Middle Earth they were challenged to travel to"
+        `,
+        answerType: "text",
+        answers: {
+            accepted: [
+                "mordor"
+            ]
+        },
+        success: `Small in stature, but great in strength. You take back your ill got gains`,
+        failure: `"Try again puny hobbit"`,
+        next: {
+            destination: "gobletEnding"
+        }
+    },
+
+    gobletEnding: {
+        type: "ending",
+        title: "The Mind Reading Ring",
+        image: "images/casino.png",
+        story: `
+        Card shark is perhaps a good description of you. You play cards, and as a shark does, simply devour your prey.
+        You've amassed more wealth than any one individual could spend in several lifetimes, yet you still are and never will be satisfied.
+        Oddly as time goes on you feel your grip on language...sleeping? slaping? sl...something...
+        Even reading thees eue our stroughelqingnakd alhdlsa endsg jvdsalj
+        `,
+        endingText: `
+            Your Ring:
+            Power: Mind Reading
+            Effect: Loss of Language
+            Origin: Created by a trickster troll
+        `,
+        mysteryClue: "The cursed ring your party seeks was forged from something incredible",
+        next: null
+    },
+    //--------------------------------------------------
     // LAMP PATH
     //--------------------------------------------------
 
@@ -400,7 +507,7 @@ const pages = {
             Effect: Growth
             Origin: Forged from the bones of a giant
         `,
-        mysteryClue: "",
+        mysteryClue: "The cursed ring the party seeks of course has an effect that curses its user",
         next: null
     },
 
