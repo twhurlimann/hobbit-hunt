@@ -770,8 +770,9 @@ The Cursed Ring has power over one of the elements
 
 
 
-};
- eye1: {
+},
+    
+    eye1: {
 
         type: "clue",
 
