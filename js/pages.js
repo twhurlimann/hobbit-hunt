@@ -117,7 +117,96 @@ const pages = {
         `,
         next: null
     },
+  //--------------------------------------------------
+    // LAMP PATH
+    //--------------------------------------------------
 
+    lamp1: {
+        type: "clue",
+        title: "What a Lovely Ring",
+        image: "images/toast.png",
+        story: `
+            You appreciate that Tyler would encourage you to say such kind words at your friend's birthday party, but also appreciate this ring he gave you.
+            Did he know it turns you invisible?
+            Nonetheless it was quite helpful for slipping away unseen.
+            You've never been much for crowds
+            Infact, wouldn't it be great to slip away entirely?
+            No one would see you leave so there's no need of awkward goodbyes...
+        `,
+        prompt: `
+            Name the river south of the weary traveler
+        `,
+        answerType: "text",
+        answers: {
+            accepted: [
+                "greyflood river",
+                "greyflood",
+                "grey flood",
+                "the grey flood",
+                "the greyflood",
+                "the greyflood river"
+                "the grey flood river"
+            ]
+        },
+        success: `
+           Perfect! Far away to no longer be bothered
+        `,
+        failure: "Hmm, that doesn't seem right, check the map again for the horseman",
+        next: {
+            destination: "lamp2"
+        }
+    },
+
+    lamp2: {
+        type: "clue",
+        title: "The Road to Isolation",
+        image: "images/road.png",
+        story: `
+           How remarkable for a hobbit to not only leave the Shire, but to do so on such a whim and telling no one?! Madness perhaps, the easiest decision for you.
+           The road has been somehwat challenging at times, but overall pleasent. The changing landscapes and evenings under the stary sky are certainly appealing. 
+           While it may seem lonely, you have do have the one, most important thing with you: your ring. Thankfully with its power you are easily able to avoid interactions with fellow travelers. After all, they could be bandits desire to steal your precious treasure! Yet their never able to see you when they pass you, and that keeps you, both of you, safe.
+           "Mighty far journey for a hobbit eh?" you hear a voice behind you
+           Oh no! how did you miss what must be a bandit. Some people don't need a ring to be invisible.
+           "Where are you off to little fella?" Sure he seems kind, but he's just trying to decive you. He knows you have that precious ring; he knows and he wants it! He must!
+           It would be most helpful to simply...dispose of this person
+        `,
+        prompt: `
+           Someone here has a ring that controls fire. Type the name of the mountains they traveled to in their own journey
+        `,
+        answerType: "text",
+        answers: {
+            accepted: [
+                "ettenmoors"
+            ]
+        },
+        success: `Burn! Burn! You'll never have my precious!`,
+        failure: "May want to ask the mountains name again",
+        next: {
+            destination: "lampEnding"
+        }
+    },
+
+    lampEnding: {
+        type: "ending",
+        title: "The Invisibility Ring",
+        image: "images/precious.png",
+        story: `
+        My how things have changed since you left the Shire, and who knows how long it's been. Who even cares? No company? You've all the company you need...precious, precious company.
+        You've abandoned the road and wander the countryside, all the easier to avoid all those bandits: everyone is a bandit in the end.
+        You still emjoy the stars every night, they seem almost as enticing as the ring you care most about.
+        This evening the stars seem even to be...falling? Wow! An incredible sight. And what's that? Is one falling directly at you!
+        You dive away as the falling star lands not far from where you had been standing. Scurrying over to investigate you notice something amazing.
+        Your beautiul ring, your precious, it is clearly made from the very same material!
+        `,
+        endingText: `
+            Your Ring:
+            Power: Invisibility
+            Effect: Madness (My Precious!)
+            Origin: Forged from a Fallen Star
+        `,
+        mysteryClue: "",
+        next: null
+    },
     //--------------------------------------------------
     // BRIDGE PATH
     //--------------------------------------------------
