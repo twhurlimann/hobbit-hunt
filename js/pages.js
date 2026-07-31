@@ -164,7 +164,7 @@ const pages = {
         story: `
            How remarkable for a hobbit to not only leave the Shire, but to do so on such a whim and telling no one?! Madness perhaps to some, the easiest decision for you.
            The road has been somehwat challenging at times, but overall pleasent. The changing landscapes and evenings under the stary sky are certainly appealing. 
-           While it may seem lonely, you do have the one, most important thing with you: your ring. Thankfully with its power you are easily able to avoid interactions with fellow travelers. After all, they could be bandits desiring to steal your precious treasure! Yet their never able to see you when they pass you, and that keeps you, both of you, safe.
+           While it may seem lonely, you do have the one, most important thing with you: your ring. Thankfully with its power you are easily able to avoid interactions with fellow travelers. After all, they could be bandits desiring to steal your precious treasure! Yet they're never able to see you when they pass you, and that keeps you, both of you, safe.
            "Mighty far journey for a hobbit eh?" you hear a voice behind you
            Oh no! how did you miss what must be a bandit. Some people don't need a ring to be invisible.
            "Where are you off to little fella?" Sure he seems kind, but he's just trying to decive you. He knows you have that precious ring; he knows and he wants it! He must!
