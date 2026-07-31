@@ -371,7 +371,7 @@ const pages = {
     stone2: {
         type: "clue",
         title: "The Way to Rivendell",
-        image: "images/ettenmoors.png",
+        image: "images/rivendell.png",
         story: `
            You're preparing to journey to Rivendell in hopes of learning more about this ring and hopefully quieting the ghost that haunts it.
            Suddenly, once again you feel and see the mist rising about you. Turning round frantically you see the same spirit standing off in the distance in the woods.
