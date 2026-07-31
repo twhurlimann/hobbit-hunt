@@ -235,6 +235,98 @@ const pages = {
         mysteryClue: "",
         next: null
     },
+ //--------------------------------------------------
+    // new PATH
+    //--------------------------------------------------
+
+    new1: {
+        type: "clue",
+        title: "",
+        image: "images/.png",
+        story: `
+            this is a test
+        `,
+        prompt: `
+            type rainbow
+        `,
+        answerType: "text",
+        answers: {
+            accepted: [
+                "rainbow",
+                "a rainbow"
+            ]
+        },
+        success: `
+           
+        `,
+        failure: "Ha! An interesting interpretation traveler; try again.",
+        next: {
+            destination: "new2"
+        }
+    },
+
+    new2: {
+        type: "clue",
+        title: "To The Rainbow",
+        image: "images/rainbow.png",
+        story: `
+           this is a test, be sure to type dragon fang
+        `,
+        prompt: `
+           let's make sure this works
+        `,
+        answerType: "text",
+        answers: {
+            accepted: [
+                "dragon fang",
+                "a dragon fang",
+    
+            ]
+        },
+        success: `Off to the rainbow!`,
+        failure: "That isn't the flight ring, you'll have to keep looking",
+        next: {
+            destination: "new3"
+        }
+    },
+
+    new3: {
+        type: "clue",
+        title: "The End of the Rainbow",
+        image: "images/crystalpalace.png",
+        story: `
+           the third test
+        `,
+        prompt: `
+            What is the value of the coin with an owl on it?
+        `,
+        answerType: "number",
+        answers: {
+            accepted: [1]
+        },
+        success: `"Ah! A lovely piece! Very well, come inside"`,
+        failure: "I would prefer a different coin",
+        next: {
+            destination: "newEnding"
+        }
+    },
+
+    newEnding: {
+        type: "ending",
+        title: "The Water Ring",
+        image: "images/cloudking.png",
+        story: `
+        the final test
+        `,
+        endingText: `
+            Your Ring:
+            Power: Water Manipulation
+            Effect: Healing
+            Origin: Found at the end of a rainbow
+        `,
+        mysteryClue: "",
+        next: null
+    },
 
     //--------------------------------------------------
     // PIPE PATH
