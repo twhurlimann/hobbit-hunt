@@ -162,9 +162,9 @@ const pages = {
         title: "The Road to Isolation",
         image: "images/road.png",
         story: `
-           How remarkable for a hobbit to not only leave the Shire, but to do so on such a whim and telling no one?! Madness perhaps, the easiest decision for you.
+           How remarkable for a hobbit to not only leave the Shire, but to do so on such a whim and telling no one?! Madness perhaps to some, the easiest decision for you.
            The road has been somehwat challenging at times, but overall pleasent. The changing landscapes and evenings under the stary sky are certainly appealing. 
-           While it may seem lonely, you have do have the one, most important thing with you: your ring. Thankfully with its power you are easily able to avoid interactions with fellow travelers. After all, they could be bandits desire to steal your precious treasure! Yet their never able to see you when they pass you, and that keeps you, both of you, safe.
+           While it may seem lonely, you do have the one, most important thing with you: your ring. Thankfully with its power you are easily able to avoid interactions with fellow travelers. After all, they could be bandits desiring to steal your precious treasure! Yet their never able to see you when they pass you, and that keeps you, both of you, safe.
            "Mighty far journey for a hobbit eh?" you hear a voice behind you
            Oh no! how did you miss what must be a bandit. Some people don't need a ring to be invisible.
            "Where are you off to little fella?" Sure he seems kind, but he's just trying to decive you. He knows you have that precious ring; he knows and he wants it! He must!
@@ -191,9 +191,10 @@ const pages = {
         title: "The Invisibility Ring",
         image: "images/precious.png",
         story: `
-        My how things have changed since you left the Shire, and who knows how long it's been. Who even cares? No company? You've all the company you need...precious, precious company.
+        My how things have changed since you left the Shire, and who knows how long it's been. Who even cares? No company? 
+        You've all the company you need...precious, precious company.
         You've abandoned the road and wander the countryside, all the easier to avoid all those bandits: everyone is a bandit in the end.
-        You still emjoy the stars every night, they seem almost as enticing as the ring you care most about.
+        You still enjoy the stars every night, they seem almost as enticing as the ring you care most about.
         This evening the stars seem even to be...falling? Wow! An incredible sight. And what's that? Is one falling directly at you!
         You dive away as the falling star lands not far from where you had been standing. Scurrying over to investigate you notice something amazing.
         Your beautiul ring, your precious, it is clearly made from the very same material!
