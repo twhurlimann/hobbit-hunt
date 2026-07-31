@@ -236,93 +236,79 @@ const pages = {
         next: null
     },
  //--------------------------------------------------
-    // new PATH
+    // BEER PATH
     //--------------------------------------------------
 
-    new1: {
+    beer1: {
         type: "clue",
-        title: "",
-        image: "images/.png",
+        title: "The Gates of Mordor",
+        image: "images/mordor.png",
         story: `
-            this is a test
+            Oh lord, what were you thinking braving this terrifying place? Your newfound strength has given you far too much confidence.
+            You've made it to the gates of Mordor, but if you're going to be bold enough to actually go inside, it would be helpful to avoid the ire of that huge Eye on the Tower
         `,
         prompt: `
-            type rainbow
+            Someone here has a ring that turns them invisible. Find them and ask them the last word of their first clue
         `,
         answerType: "text",
         answers: {
             accepted: [
-                "rainbow",
-                "a rainbow"
+                "out"
             ]
         },
         success: `
-           
+           This will be far less dangerous now
         `,
-        failure: "Ha! An interesting interpretation traveler; try again.",
+        failure: "Are you sure that's what it says? Have another look",
         next: {
-            destination: "new2"
+            destination: "beer2"
         }
     },
 
-    new2: {
+    beer2: {
         type: "clue",
-        title: "To The Rainbow",
-        image: "images/rainbow.png",
+        title: "The Giant Graveyard",
+        image: "images/giant.png",
         story: `
-           this is a test, be sure to type dragon fang
+           Exploring Mordor is terrible, and yet also so...fascinating. At first you were enering for braging rights, but now, something about the ring has drawn you to the most interesting place.
+           You're surrounded by the humongous bones of giants, and as you look closer you can see that your ring is clearly forged from the same material.
+           This likely explains why it would bestow such incredible strength into the wearer!
+           With such an unexpected mystery solved, it's time to return home to the Shire, just need to find your way...
         `,
         prompt: `
-           let's make sure this works
+           On the map, what image is painted directly below The Shire
         `,
         answerType: "text",
         answers: {
             accepted: [
-                "dragon fang",
-                "a dragon fang",
+                "pipe",
+                "a pipe",
     
             ]
         },
-        success: `Off to the rainbow!`,
-        failure: "That isn't the flight ring, you'll have to keep looking",
+        success: `Let's go home. You collect a pouch full of the unmistakable volcanic ash of Mordor to prove your journey and start on your way`,
+        failure: "That doesn't seem right, I should check the map again",
         next: {
-            destination: "new3"
+            destination: "beerEnding"
         }
     },
-
-    new3: {
-        type: "clue",
-        title: "The End of the Rainbow",
-        image: "images/crystalpalace.png",
-        story: `
-           the third test
-        `,
-        prompt: `
-            What is the value of the coin with an owl on it?
-        `,
-        answerType: "number",
-        answers: {
-            accepted: [1]
-        },
-        success: `"Ah! A lovely piece! Very well, come inside"`,
-        failure: "I would prefer a different coin",
-        next: {
-            destination: "newEnding"
-        }
-    },
-
-    newEnding: {
+   
+    beerEnding: {
         type: "ending",
-        title: "The Water Ring",
-        image: "images/cloudking.png",
+        title: "The Strength Ring",
+        image: "images/strengthring.png",
         story: `
-        the final test
+        You've made it home and what a story you'll have to tell! First and foremost to the one who challenged you to test your courage.
+        You walk right up behind Chandler as he is sitting with a group of friends and drop your bag of Mordor ash right over his shoulder ont the table.
+        "By the Gods you actually did it you mad mad hobbit!" he cries out
+        "And goodness are you...are you taller?" he asks you
+        Now that he mentions it, you do seem to be further from the ground, just another benefit of this blessed ring
         `,
         endingText: `
             Your Ring:
-            Power: Water Manipulation
-            Effect: Healing
-            Origin: Found at the end of a rainbow
+            Power: Strength
+            Effect: Growth
+            Origin: Forged from the bones of a giant
         `,
         mysteryClue: "",
         next: null
