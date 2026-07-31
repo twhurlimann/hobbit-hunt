@@ -153,7 +153,7 @@ const pages = {
     ocarina2: {
         type: "clue",
         title: "The Origin of the Air Ring",
-        image: "images/rainbow.png",
+        image: "images/airRing.png",
         story: `
            "Wizard is correct my hobbit friend," chuckles the old wizard. "Can you read the whole thing?" he asks you.
            Amazingly, you can, with ease! Despite the entire thing being pure giberish before you can easily read that it says "Property of the Wizard of Forlond"
