@@ -354,7 +354,7 @@ const pages = {
             You turn around to see the pale, terrifying face of a female spectre who suddenly opens her mouth wide, screams deafeningly loud and flies into you, disappearing along with the mist.
             Didn't Tyler give you this ring? You should demand an explanation from him.
         `,
-        prompt: "See Tyler for the answer to move on",
+        prompt: "See Tyler and ask where the ring came from, then type the name",
         answerType: "text",
         answers: {
             accepted: ["rivendell"]
