@@ -213,7 +213,7 @@ const pages = {
         story: `
         You enter and make your way to a table shared by a few wizards.
         "My my! Not often we see hobbits in this part of the world!" one remarks "What brings you all this way?" asks another.
-        "I believe I've found something belonging to on of you," you reply as you raise the ring outstretched in your fingers.
+        "I believe I've found something belonging to one of you," you reply as you raise the ring outstretched in your fingers.
         "Oh! You've returned my ring!" one of them exclaims. "You hobbits and your penchant for kindness is truly remarkable"
         Certainly is nice to have made a new friend, especially one skilled with magic!
         `,
