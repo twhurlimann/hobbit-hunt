@@ -592,10 +592,6 @@ The Cursed Ring has power over one of the elements
 
         next: null
 
-    }
-
-
-
 };
 
     stone1: {
