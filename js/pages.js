@@ -130,7 +130,7 @@ const pages = {
             "What a wonderful trick," an old wizard remarks as he walks up to you. "Playing an ocarina with just your hands is no easy feat!"
             "I recognize that ring you've fond," he continues. "Aren't you curious where it came from hobbit friend? Take a look at the inscription inside, see if you can't read it"
             You remove the ring and lo and behold, there is something written inside! It looks like giberish yet you are seemingly able to interpret it with ease
-            'BNEFWI'
+            'Rduvmy'
         `,
         prompt: `
             Decode the ring's inscription (perhaps the coin you found with your ring may help...)
@@ -144,7 +144,7 @@ const pages = {
         success: `
            "Wizard, it clearly says wizard"
         `,
-        failure: "An interesting interpretation; try again.",
+        failure: "An interesting interpretation; it is a 5 letter word...try again.",
         next: {
             destination: "ocarina2"
         }
