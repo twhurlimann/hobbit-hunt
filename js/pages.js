@@ -34,11 +34,11 @@ const pages = {
         prompt: `
             "As much as I enjoy the taste of Hobbit, my love of gold exceeds it.
             I'll let you pass for the correct value coin" commands the Dragon.
-            (input the value of the coin with a dragon on it, someone here has it),
+            (input the value of the coin with beer mugs on it, someone here has it),
         `,
         answerType: "number",
         answers: {
-            accepted: [100]
+            accepted: [5]
         },
         success: `
             "Ah, a lovely piece to add to my horde," proclaims the dragon.
