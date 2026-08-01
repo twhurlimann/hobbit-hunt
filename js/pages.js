@@ -117,7 +117,128 @@ const pages = {
         `,
         next: null
     },
-  //--------------------------------------------------
+   //--------------------------------------------------
+    // FOX PATH
+    //--------------------------------------------------
+
+    fox1: {
+        type: "clue",
+        title: "The Legend of the Forest",
+        image: "images/fox.png",
+        story: `
+            You've found that pesky fox! With the ring it is so easy to convince him to shove off to another part of the wood and leave your chickens alone. "Leave and never come back to my chickens please," you command the fox. With a seeming nod of understanding, the creature bows and runs off into the forest.
+            "My my," you hear a voice procalim. "It isn't easy to have such command over the creatures of the forest."
+            You turn around to see the old wizard, he's clearly noticed the power of this ring you've found.
+            "I remember a great king who had such power and the ring that gave it to him. A great king of the forest," he continues. "Legend tells of his rule bringing peace to the wood and after his passing, the robbing of a treasure from his grave brought death and destruction to the very wood he protected and loved so much"
+            Well that simply breaks your heart. It's lovely to be able to attend to trickster foxes in your backyard, but not at the expense of a suffering forest. Surely this ring needs to be returned to its homeland.
+            "Where was this forest of legend you speak of wizard?" you ask
+            "The forest in the region of Harlindon," he answers
+            Best to check the map to see how to get there
+        `,
+        prompt: `
+            Name the river flowing into the harlindon region of the map
+        `,
+        answerType: "text",
+        answers: {
+            accepted: [
+                "brandywine river",
+                "brandywine",
+                "the brandywine river",
+                "the brandywine",
+                "brandy wine",
+                "the brandy wine",
+                "the brandy wine river"
+            ]
+        },
+        success: `
+           Ah yes! Brandywine, best to travel by water I'd say
+        `,
+        failure: "That doesn't seem right. Check the map just east of the mountains of Harlindon",
+        next: {
+            destination: "fox2"
+        }
+    },
+
+    fox2: {
+        type: "clue",
+        title: "On the River",
+        image: "images/waterfall.png",
+        story: `
+        The river is such a lovely way to travel. You've enjoyed the calm water as you flow to this mythical wood. But oh no! What is that ahead? It seems the water is getting much, much faster and rougher.
+        Looking to the end of the river on the horizon you can see that it is dropping off into what seems a gigantic waterfall!
+        If only there were some way to control the water and then it would be smooth sailing (or rowing in your case) the entire way
+        `,
+        prompt: `
+           Someone here has a ring that controls the water. Ask them under what they found their QR code
+        `,
+        answerType: "text",
+        answers: {
+            accepted: [
+                "a bridge",
+                "a wooden bridge",
+                "bridge",
+                "wooden bridge"
+    
+            ]
+        },
+        success: `Just in time to avoid the falls!`,
+        failure: "That isn't the right spot, best ask them again",
+        next: {
+            destination: "fox3"
+        }
+    },
+
+    fox3: {
+        type: "clue",
+        title: "The Dead Forest",
+        image: "images/deadforest.png",
+        story: `
+        You've made it! And unfortunately the wizard was right, this land is devesated. The animals have all disappeared, the trees are barren...You must save this place.
+        Suddenly, off in the distance you see someone. She notices you too and comes toward you.
+        "A hobbit in this abandoned place?" She asks "Why would you come to my father's destroyed homeland? Those blasted grave robbers have ruined my inheratince!"
+        This must be the princess of the wood. "I've come to return what was stolen from the king," you tell her as you show her the ring
+        "Wonderful and kind hobbit!" she proclaims. "But to enter his tomb and restore his ring you'll need to prove your worthiness and answer the riddle on the door. Answer correctly and you may enter and save my forest."
+        Solve the riddle of the tomb to enter
+        `,
+        prompt: `
+        This thing all things devours:
+Birds, beasts, trees, flowers;
+Gnaws iron, bites steel;
+Grinds hard stones to meal;
+Slays king, ruins town,
+And beats high mountain down.
+        `,
+        answerType: "text",
+        answers: {
+            accepted: ["time"]
+        },
+        success: `"That was surprisingly easy..."`,
+        failure: "Try again",
+        next: {
+            destination: "foxEnding"
+        }
+    },
+
+    newEnding: {
+        type: "ending",
+        title: "The Animal Ring",
+        image: "images/forest.png",
+        story: `
+        That riddle would have stumped you for days before, yet something about this ring has given you such clarity of mind, it was simple to immediately answer.
+        You enter and find the king's grave, slipping his ring back onto his finger.
+        As you exit back to the forest, the land has completely changed. It is vibrant and covered in green, and animals of the wood move all about.
+        "Thank you kind hobbit," the princess says
+        `,
+        endingText: `
+            Your Ring:
+            Power: Animal Manipulation
+            Effect: Clarity of Mind
+            Origin: Belonged to a Great King
+        `,
+        mysteryClue: "",
+        next: null
+    },
+    //--------------------------------------------------
     // OCARINA PATH
     //--------------------------------------------------
 
