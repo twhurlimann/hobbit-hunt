@@ -761,7 +761,7 @@ And beats high mountain down.
         prompt: "What is the name of the mountain range to the South of Angmar?",
         answerType: "text",
         answers: {
-            accepted: ["ettenmoors"
+            accepted: ["ettenmoors",
                       "the ettenmoors"]
         },
         success: `
