@@ -764,7 +764,8 @@ const pages = {
         prompt: "Waters near Rivendell? It must be that river which runs into it, what was its name again?",
         answerType: "text",
         answers: {
-            accepted: ["loudwater"]
+            accepted: ["loudwater",
+                      "loudwater river"]
         },
         success: `
             Right! Loudwater! Let's make our way!
