@@ -133,7 +133,7 @@ const pages = {
             'BNEFWI'
         `,
         prompt: `
-            Decode the ring's inscription (perhaps one of the coins you found with your ring may help...)
+            Decode the ring's inscription (perhaps the coin you found with your ring may help...)
         `,
         answerType: "text",
         answers: {
