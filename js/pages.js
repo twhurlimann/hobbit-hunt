@@ -219,7 +219,7 @@ And beats high mountain down.
         }
     },
 
-    newEnding: {
+    foxEnding: {
         type: "ending",
         title: "The Animal Ring",
         image: "images/forest.png",
@@ -761,7 +761,8 @@ And beats high mountain down.
         prompt: "What is the name of the mountain range to the South of Angmar?",
         answerType: "text",
         answers: {
-            accepted: ["ettenmoors"]
+            accepted: ["ettenmoors"
+                      "the ettenmoors"]
         },
         success: `
             Forged from the chains of a powerful prisoner? Hopefully you won't find too much trouble on this new journey...
