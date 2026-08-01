@@ -732,7 +732,7 @@ const pages = {
         title: "A Haunting Discovery",
         image: "images/elfghost.png",
         story: `
-            It's good to get these blasted stones so easily removed, but wait...is it getting...foggy?
+            It's good to get these mushrooms so easily removed, but wait...is it getting...foggy?
             A grayness and mist seem to build around you and a chill climbs up your spine.
             "Return my ring" you hear a soft, almost airy voice demand behind you.
             You turn around to see the pale, terrifying face of a female spectre who suddenly opens her mouth wide, screams deafeningly loud and flies into you, disappearing along with the mist.
