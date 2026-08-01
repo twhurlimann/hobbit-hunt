@@ -689,7 +689,7 @@ const pages = {
            He draws a long, dark blade and begins sprinting toward you.
            You're still mastering this ring, but the time to test your skill has come.
         `,
-        prompt: "Complete Tyler's challenge to continue",
+        prompt: "Complete Chandler's challenge to continue",
         answerType: "number",
         answers: {
             accepted: [451]
